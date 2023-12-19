@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (ViewData["Message"] is not null) {
+    <div class="alert alert-danger">
+        <p>@ViewData["Message"]</p>
+    </div>
+}
+
+<form asp-action="Index">
+    <div class="form-group">
+        <label for="exampleInputTitle">Title</label>
+        <input type="text" name="Title" class="form-control" id="exampleInputTitle" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputDescription">Description</label>
+        <input type="text" name="Description" class="form-control" id="exampleInputDescription" placeholder="Description">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
